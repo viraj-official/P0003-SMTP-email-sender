@@ -46,6 +46,7 @@ server.login(sender_email, sender_password)
 
 To send emails, we’ll use a loop to iterate through the receiver email addresses and send emails one by one. Here’s the code:
 ```
+receiver_emails = ["receiver+email1@mail.com","receiver+email2@mail.com"]
 for receiver_email in receiver_emails:  
     msg = MIMEMultipart('alternative')  
     msg['Subject'] = "Test mail"  
@@ -90,6 +91,7 @@ receiver_emails = ["receiver+email1@mail.com","receiver+email2@mail.com"]
 server = smtplib.SMTP_SSL('smtp.googlemail.com', 465)  
 server.login(sender_email, sender_password)  
   
+receiver_emails = ["receiver+email1@mail.com","receiver+email2@mail.com"]
 for receiver_email in receiver_emails:  
     msg = MIMEMultipart('alternative')  
     msg['Subject'] = "Test mail"  
